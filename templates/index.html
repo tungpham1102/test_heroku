@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    img {
+        width: 40px;
+        height: 40px;
+    }
+</style>
+<body>
+    <table class="table">
+        <tr>
+            <th>Title</th>
+            <th>Phone</th>
+            <th>Image</th>
+        </tr>
+        {% for test in tests %}
+        <tr>
+            <td> {{test.title}}</td>
+            <td> {{test.phone}}</td>
+            <td><img src="/static/images/{{test.image}}" alt="image"></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
